@@ -16,8 +16,8 @@ synth-vr is part of a three-package architecture for creating, training, and int
 
 | Package | Role | |
 |---------|------|-|
-| [**synth-core**](https://github.com/arghyasur1991/synth-core) | Humanoid creation, MuJoCo physics, skill architecture | Required |
-| [**synth-training**](https://github.com/arghyasur1991/synth-training) | On-device reinforcement learning via TorchSharp SAC | Optional |
+| [**synth-core**](https://github.com/genesisinteractive/synth-core) | Humanoid creation, MuJoCo physics, skill architecture | Required |
+| [**synth-training**](https://github.com/genesisinteractive/synth-training) | On-device reinforcement learning via TorchSharp SAC | Optional |
 | **synth-vr** *(this repo)* | Mixed reality interaction on Meta Quest | — |
 
 synth-core provides the physics body and motor system. synth-vr adds Meta Quest hand tracking, MRUK room integration, and passthrough rendering so the Synth lives in your physical space. Optionally add **synth-training** to enable on-device reinforcement learning — the Synth trains live on Quest while you interact with it.
@@ -25,7 +25,7 @@ synth-core provides the physics body and motor system. synth-vr adds Meta Quest 
 ## Requirements
 
 - Unity 6000.x or later
-- [synth-core](https://github.com/arghyasur1991/synth-core) package
+- [synth-core](https://github.com/genesisinteractive/synth-core) package
 - MuJoCo Unity plugin (`org.mujoco`) — via [arghyasur1991/mujoco](https://github.com/arghyasur1991/mujoco) fork (`synth-patches` branch)
 - Meta XR SDK packages (v85+):
   - `com.meta.xr.sdk.interaction.ovr`
@@ -33,7 +33,7 @@ synth-core provides the physics body and motor system. synth-vr adds Meta Quest 
 
 ### Optional
 
-- [synth-training](https://github.com/arghyasur1991/synth-training) — Add on-device reinforcement learning so the Synth trains directly on Quest while you interact with it in your room. Without this package, synth-vr provides physics interaction only (no learning).
+- [synth-training](https://github.com/genesisinteractive/synth-training) — Add on-device reinforcement learning so the Synth trains directly on Quest while you interact with it in your room. Without this package, synth-vr provides physics interaction only (no learning).
 
 ## Installation
 
@@ -42,8 +42,8 @@ Add to `Packages/manifest.json`:
 ```json
 {
   "dependencies": {
-    "com.genesis.synth.vr": "https://github.com/arghyasur1991/synth-vr.git",
-    "com.genesis.synth": "https://github.com/arghyasur1991/synth-core.git",
+    "com.genesis.synth.vr": "https://github.com/genesisinteractive/synth-vr.git",
+    "com.genesis.synth": "https://github.com/genesisinteractive/synth-core.git",
     "org.mujoco": "https://github.com/arghyasur1991/mujoco.git?path=unity#synth-patches"
   }
 }
